@@ -1,5 +1,7 @@
 import tkinter as tk
 from pathlib import Path
+from tkinter import ttk
+import sv_ttk
 
 enemyCards = []
 playerCards = []
@@ -39,12 +41,12 @@ def resetEnemy():
      enemyCard.configure(text='')
      enemyCards.clear()
 for i in range(1, 12):
-    button = tk.Button(text=i, highlightbackground='red', command= lambda x=i: enemy(str(x))).grid(row=i, column=0, padx=10, pady=5)
+    button = ttk.Button(text=i, command= lambda x=i: enemy(str(x))).grid(row=i, column=0, padx=10, pady=5)
     
 for i in range(1, 12):
-    button = tk.Button(text=i, highlightbackground='green', command= lambda x=i: player(str(x))).grid(row=i, column=2, padx=10, pady=5)
-resetPlayer = tk.Button(root, text="Reset your cards?", command=resetPlayer).grid(row=3,column=1)
-resetEnemy = tk.Button(root, text="Reset enemy?", command=resetEnemy).grid(row=4,column=1)
-resetAll = tk.Button(root, text="Reset all?", command=resetAll).grid(row=5,column=1)
-
+    button = ttk.Button(text=i, command= lambda x=i: player(str(x))).grid(row=i, column=2, padx=10, pady=5)
+resetPlayer = ttk.Button(root, text="Reset your cards?", command=resetPlayer).grid(row=3,column=1)
+resetEnemy = ttk.Button(root, text="Reset enemy?", command=resetEnemy).grid(row=4,column=1)
+resetAll = ttk.Button(root, text="Reset all?", command=resetAll).grid(row=5,column=1)
+sv_ttk.set_theme('dark')
 root.mainloop()
