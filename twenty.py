@@ -5,7 +5,7 @@ enemyCards = []
 playerCards = []
 root = tk.Tk()
 root.title("Card Selecter")
-file = Path("cardPage.txt")
+root.resizable(False, False)
 info_panel = tk.Text(root, width=40, height=20)
 info_panel.grid(row=0, column=1,padx=50,pady=50)
 enemyCard = tk.Label(root, text="", width=15, height=3, bg='red', relief='flat')
