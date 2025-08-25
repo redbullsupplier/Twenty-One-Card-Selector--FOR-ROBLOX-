@@ -34,6 +34,8 @@ def resetAll():
      info_panel.delete(1.0, 'end')
      playerCard.configure(text='')
      enemyCard.configure(text='')
+     playerCards.clear()
+     enemyCards.clear()
 def resetPlayer():
      playerCard.configure(text='')
      playerCards.clear()
